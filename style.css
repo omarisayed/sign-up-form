@@ -1,0 +1,69 @@
+
+/**Custom Properties**/
+
+:root{
+    font-size: 62.5%;
+
+    --img-cont-bg: #9754cb;
+}
+
+/**Changing default styles for browser**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/**Form control styling**/
+.container{
+    display: grid;
+    grid-template-columns: calc(100% - 60%) auto;
+    height: 100vh;
+    width: 100%;
+}
+
+#image-container{
+    display: grid;
+    place-items: center;
+    background: var(--img-cont-bg);
+}
+
+#image-container > img{
+    width: 90%;
+}
+
+form{
+    display: grid;
+    place-items: center;
+}
+
+#form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    width: 50vw;
+    font-size: 1.5rem;
+}
+
+#form-header, #form-btm{
+   /** grid-column-start: 1;
+    grid-column-end: -1; **/
+    grid-column: 1/-1;
+    display: block;
+}
+
+label{
+    display: block;
+}
+
+input{
+    padding: 0.5em;
+}
+
+
+
+
+
+/**Media Queries**/
