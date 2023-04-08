@@ -1,10 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
 /**Custom Properties**/
 
 :root{
     font-size: 62.5%;
 
     --img-cont-bg: #9754cb;
+    --form-cont-bg: #ffffff;
+    --btn-color: #ffffff;
+    --btn-bg-color: #9754cb;
+    --a-color: #9754cb;
+    --letter-spacing: 0.3rem;
+    --font-fam: 'Poppins', sans-serif;
 }
 
 /**Changing default styles for browser**/
@@ -13,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-fam)
 }
 
 
@@ -28,15 +38,27 @@
     display: grid;
     place-items: center;
     background: var(--img-cont-bg);
+    position: relative;
+}
+
+.company-name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.6em 0 0 0.6em;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
 }
 
 #image-container > img{
-    width: 90%;
+    width: 80%;
 }
 
 form{
     display: grid;
     place-items: center;
+    background: var(--form-cont-bg);
 }
 
 #form-container{
@@ -54,13 +76,45 @@ form{
     display: block;
 }
 
+#form-header{
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
+}
+
 label{
     display: block;
+    letter-spacing: var(--letter-spacing);
 }
 
 input{
-    padding: 0.5em;
+    padding: 0.5em 2em;
+    border-radius: 0.5rem;
 }
+
+[type="submit"]{
+    font-size: 1.7rem;
+    padding: 1em 4em;
+    color: var(--btn-color);
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
+    background-color: var(--btn-bg-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#form-container > div > p{
+    margin-top: 0.6em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--a-color);
+    font-weight: bold;
+}
+
+
+
 
 
 
