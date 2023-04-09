@@ -6,12 +6,8 @@
 
 :root{
     font-size: 62.5%;
-
-    --img-cont-bg: #9754cb;
-    --form-cont-bg: #ffffff;
-    --btn-color: #ffffff;
-    --btn-bg-color: #9754cb;
-    --a-color: #9754cb;
+    --purp: #9754cb;
+    --white: #ffffff;
     --letter-spacing: 0.3rem;
     --font-fam: 'Poppins', sans-serif;
 }
@@ -26,7 +22,7 @@
 }
 
 
-/**Form control styling**/
+/**Container styling**/
 .container{
     display: grid;
     grid-template-columns: calc(100% - 60%) auto;
@@ -37,7 +33,7 @@
 #image-container{
     display: grid;
     place-items: center;
-    background: var(--img-cont-bg);
+    background: var(--purp);
     position: relative;
 }
 
@@ -49,6 +45,7 @@
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: var(--letter-spacing);
+    color: var(--white);
 }
 
 #image-container > img{
@@ -58,7 +55,7 @@
 form{
     display: grid;
     place-items: center;
-    background: var(--form-cont-bg);
+    background: var(--white);
 }
 
 #form-container{
@@ -95,10 +92,10 @@ input{
 [type="submit"]{
     font-size: 1.7rem;
     padding: 1em 4em;
-    color: var(--btn-color);
+    color: var(--white);
     font-weight: bold;
     letter-spacing: var(--letter-spacing);
-    background-color: var(--btn-bg-color);
+    background-color: var(--purp);
     border-radius: 0.5rem;
     cursor: pointer;
 }
@@ -107,16 +104,26 @@ input{
     margin-top: 0.6em;
 }
 
-a{
-    text-decoration: none;
-    color: var(--a-color);
+a{   
     font-weight: bold;
 }
 
+a:link { 
+    text-decoration: none;
+    color: var(--purp);
+ }
 
+a:visited { 
+    text-decoration: none; 
+}
 
+a:hover { 
+    text-decoration: underline; 
+}
 
-
+a:active { 
+    text-decoration: none; 
+}
 
 
 
