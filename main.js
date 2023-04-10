@@ -22,7 +22,7 @@ submitBtn.addEventListener('click', (e) =>{
 
 function fName(){
     let validFname = (/^[A-Za-z]+$/);
-    if (firstName.value.trim() === '' || firstName.value.match(validFname) === null){  
+    if (firstName.value === '' || firstName.value.match(validFname) === null){  
         errorMessage[0].innerHTML = "Please enter a valid name";
         failureIcon[0].style.opacity = "1";
         successIcon[0].style.opacity = "";
@@ -36,7 +36,7 @@ function fName(){
 
 function lName(){
     let validLname = (/^[A-Za-z]+$/);
-    if (lastName.value.trim() === '' || lastName.value.match(validLname) === null){
+    if (lastName.value === '' || lastName.value.match(validLname) === null){
         errorMessage[1].innerHTML = "Please enter a valid name";
         failureIcon[1].style.opacity = "1";
         successIcon[1].style.opacity = "";
@@ -52,7 +52,7 @@ function lName(){
 function eMail(){
     let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if (email.value.trim() === ''|| email.value.match(validEmail) === null){
+    if (email.value === ''|| email.value.match(validEmail) === null){
         errorMessage[2].innerHTML = "Please enter a valid email in the format of user@domain.com";
         failureIcon[2].style.opacity = "1";
         successIcon[2].style.opacity = "";
@@ -68,7 +68,7 @@ function eMail(){
 function telePhone(){
     let validPhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-    if (phone.value.trim() === '' || phone.value.match(validPhone) === null){
+    if (phone.value === '' || phone.value.match(validPhone) === null){
         errorMessage[3].innerHTML = "Please enter a valid phone number of 10 digits";
         failureIcon[3].style.opacity = "1";
         successIcon[3].style.opacity = "";
@@ -85,7 +85,7 @@ function telePhone(){
 function pWord(){
     var validPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{5,15}$/;
 
-    if (password.value.trim() === ''|| password.value.match(validPassword) === null){
+    if (password.value === ''|| password.value.match(validPassword) === null){
         errorMessage[4].innerHTML = "Please enter a password of 5 to 15 characters, that contains at least one number and one special character";
         failureIcon[4].style.opacity = "1";
         successIcon[4].style.opacity = "";
@@ -104,8 +104,8 @@ function confirmPword(){
 
 
 function comparePasswords(){
-    if (password.value.trim() != '' || confirmPassword.value.trim() != ''){
-        if (password.value.trim() === confirmPassword.value.trim()){
+    if (password.value != '' || confirmPassword.value != ''){
+        if (password.value === confirmPassword.value){
             errorMessage[5].innerHTML = "";
             failureIcon[5].style.opacity = "";
             successIcon[5].style.opacity = "1";
