@@ -99,17 +99,29 @@ function pWord(){
 
 
 function confirmPword(){
-    if (confirmPassword.value === ''){
-        errorMessage[5].innerHTML = "This field is required";
+    comparePasswords();
+}
+
+
+function comparePasswords(){
+    if (password.value != '' || confirmPassword.value != ''){
+        if (password.value === confirmPassword.value){
+            errorMessage[5].innerHTML = "";
+            failureIcon[5].style.opacity = "";
+            successIcon[5].style.opacity = "1";
+        }else{
+            errorMessage[5].innerHTML = "Passwords do not match";
+            failureIcon[5].style.opacity = "1";
+            successIcon[5].style.opacity = "";
+        }
+    }else{
+        errorMessage[5].innerHTML = "Please enter matching passwords";
         failureIcon[5].style.opacity = "1";
         successIcon[5].style.opacity = "";
-
-    }else{
-        errorMessage[5].innerHTML = "";
-        failureIcon[5].style.opacity = "";
-        successIcon[5].style.opacity = "1";
     }
 }
+
+
 
 //--------------------------NOTES----------------------------------------------------------------------------------------------------------------
 //the match() method returns an array of matches if the regular expression matches the string, or null (NOT false) if it doesn't match.
