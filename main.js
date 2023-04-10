@@ -128,4 +128,4 @@ function comparePasswords(){
 
 // without trim(), a string like '  '  would be treated as a valid input. So we need trim() to change it to '' and hence making it not a valid input
 // if I input '  john  ', with trim(), the backend will remove the whitespaces and interpret it as 'john'. But if I input '    ', trim will change it to '' i.e. null, hence an invalid input.
-// But since I have used Regex, even '  john  ' is invalid. the regex condition does not allow spaces before and after unless specified.
+// But since I have used Regex, even '  john  ' is invalid. the regex condition does not allow spaces before and after unless specified. So no need of using trim()
