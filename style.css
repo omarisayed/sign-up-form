@@ -12,7 +12,7 @@
     --silver: #C0C0C0;
     --dimgrey: #696969;
     --red: #ff0000;
-    --green: #00ff00;
+    --green: #008000;
     --letter-spacing: 0.3rem;
     --font-fam: 'Poppins', sans-serif;
 }
@@ -187,7 +187,6 @@ i{
 .error{
     margin-top: 0.6em;
 }
-
 
 
 /**Media Queries**/
