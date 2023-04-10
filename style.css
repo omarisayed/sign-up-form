@@ -9,6 +9,8 @@
     --purp: #9754cb;
     --white: #ffffff;
     --black: #000000;
+    --silver: #C0C0C0;
+    --dimgrey: #696969;
     --red: #ff0000;
     --green: #00ff00;
     --letter-spacing: 0.3rem;
@@ -72,7 +74,7 @@ form{
 #form-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3.8rem;
+    gap: 3.5rem;
     width: 50vw;
     font-size: 1.5rem;
 }
@@ -93,11 +95,13 @@ form{
 label{
     display: block;
     letter-spacing: var(--letter-spacing);
+    font-weight: bold;
+    color: var(--black);
 }
 
 input{
-    border: 2px solid var(--black);
-    border-radius: 0.5rem;
+    border: 2px solid var(--silver);
+    border-radius: 0.8rem;
     width: 100%;  /**100% of its div**/
     min-height: 4rem;
     padding: 0 3em;
@@ -115,8 +119,15 @@ input:focus{
     font-weight: bold;
     letter-spacing: var(--letter-spacing);
     background-color: var(--purp);
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
+    border: none;
+    outline: none;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+[type="submit"]:hover {
+    opacity: 0.8;
 }
 
 #form-container > div > p{
@@ -134,6 +145,7 @@ a:link {
 
 a:visited { 
     text-decoration: none; 
+    color: var(--purp);
 }
 
 a:hover { 
@@ -142,10 +154,11 @@ a:hover {
 
 a:active { 
     text-decoration: none; 
+    color: var(--purp);
 }
 
 
-/**Icon styling**/
+/**Icon and error styling**/
 
 #form-container > div{
     position: relative;
@@ -154,6 +167,7 @@ a:active {
 i{
     position: absolute;
     padding: 1em; 
+    color: var(--purp);
 }
 
 .failure-icon,
@@ -170,6 +184,9 @@ i{
     color: var(--green);
 }
 
+.error{
+    margin-top: 0.6em;
+}
 
 
 
